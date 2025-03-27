@@ -12,17 +12,15 @@ import { Image } from '../../models/image.model';
   styleUrl: './main.component.css'
 })
 export class MainComponent {
-  ngOnIni() {
-throw new Error('Method not implemented.');
-}
-  newImageModalId:number=1;
 
-  imgArray:Image[]=[];
+  newImageModalId:number=1; //las imagenes se enumeran desde el 1
 
-  constructor(private imgService:ImgService){}
+  imgArray:Image[]=[]; //arreglo donde guardar las imagenes
+
+  constructor(private imgService:ImgService){} // inyecta el uso del servicio
 
   ngOnInit(): void {
-    this.imgArray = this.imgService.getImages();
+    this.imgArray = this.imgService.getImages(); //obtener imagenes del servicio
   }
 
 }

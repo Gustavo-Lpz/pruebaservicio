@@ -1,1 +1,12 @@
-<p>img-container works!</p>
+<div class="image-container">
+  @for (image of images; track image.id_image) {
+    <div class="card">
+      <img [src]="image.src" class="card-img-top" alt="{{ image.name }}">
+      <div class="card-body">
+        <h5 class="card-title">{{ image.name }}</h5>
+        <a class="btn btn-primary">Ver</a>
+        <button (click)="delateImage(image.id_image)" class="btn btn-danger">Eliminar</button>
+      </div>
+    </div>
+  }
+</div>

@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Image } from '../../models/image.model'
-import { param } from 'jquery';
+
 
 @Injectable({
   providedIn: 'root'
